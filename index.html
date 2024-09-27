@@ -1,0 +1,63 @@
+<!--Using any of the tools you've worked with so far, create a game of Tic-Tac-Toe.
+*Create a Tic-Tac-Toe game grid using your HTML element of choice.
+*When a cell in the grid is clicked, an X or O should appear in that spot depending on whose turn it is.
+*A heading should say whether it is X's or O's turn and change with each move made.
+*A button should be available to clear the grid and restart the game.
+*When a player has won, or the board is full and the game results in a draw, a Bootstrap alert or similar Bootstrap component should appear across the screen announcing the winner
+-------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE</title>
+    <!--including Bootstrap CSS-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css"><!--css for custom styles -->
+
+</head>
+<body>
+
+    <div class= "container text-center mt-5">
+            <!--Game title for game-->
+        <h1 class = "mb-4">TIC-TAC-TOE</h1>
+
+        <!--This should determine on whose turn it is-->
+        <h3 id="turn-heading">X's Turn</h3>
+
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <!--Make this a grid for Tic-Tac-Toe (3X3)-->
+                <div id="grid" class="d-grid gap-2 tic-tac-toe-grid">
+                    <!--Each button should represent a cell within the grid-->
+                    <button class="btn btn-outline-secondary" data-cell></button>
+                    <button class="btn btn-outline-secondary" data-cell></button>
+                    <button class="btn btn-outline-secondary" data-cell></button>
+                    <button class="btn btn-outline-secondary" data-cell></button>
+                    <button class="btn btn-outline-secondary" data-cell></button>
+                    <button class="btn btn-outline-secondary" data-cell></button>
+                    <button class="btn btn-outline-secondary" data-cell></button>
+                    <button class="btn btn-outline-secondary" data-cell></button>
+                    <button class="btn btn-outline-secondary" data-cell></button>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Need a button to restart game-->
+        <button id="restart-btn" class="btn btn-primary mt-4">Restart Game</button>
+
+        <!-- Create alert box with a div to show the winner or if it was a draw-->
+         <div id="alert-box" class="mt-4"></div>
+    </div>
+    
+
+
+
+    <!-- make sure to connect modules and JavaScript so functionality of game works-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
